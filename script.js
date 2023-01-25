@@ -1,21 +1,25 @@
 class Team {
-  constructor(sno,team,games,won,draw,lost,tb1,tb2,tb3) {
+  constructor(sno,team,won,draw,lost, team_won,team_draw,team_loss) {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
-    this.games = games ;
+    this.games = won + draw + loss ;
     this.won = won ;
     this.draw = draw ;
     this.lost = lost ;
-    this.tb1 = tb1 ;
-    this.tb2 = tb2 ;
-    this.tb3 = tb3 ;            
+    this.team_games = team_won + team_draw + team_loss ;
+    this.team_won = team_won ; 
+    this.team_draw = team_draw ; 
+    this.team_loss = team_loss ; 
+    this.tb1 = won + draw * 0.5 ;
+    this.tb2 = team_won*2 , team_draw * 1 ;
+    this.tb3 = 0 ;            
   }
 }
 
-let JohnCena = new Team(1,"Ur mum",4,2,6,3,7,8,2);
-let Rick = new Team(1,"WHEEEEEEEEE",4,2,6,3,9,8,2);
-let Why = new Team(1,"Gae",4,2,6,3,4,6,2);
+let JohnCena = new Team(1,"Ur mum",4,2,6,3,7,8);
+let Rick = new Team(2,"WHEEEEEEEEE",4,2,6,3,9,8);
+let Why = new Team(3,"Gae",4,2,6,3,4,6);
 let participants = [JohnCena,Rick,Why];
 
 
