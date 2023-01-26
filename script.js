@@ -1,5 +1,5 @@
 class Team {
-  constructor(sno,team,won,draw,lost, team_won,team_draw,team_loss) {
+  constructor(sno,team,won,draw,lost, team_won,team_draw,team_lost) {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
@@ -7,10 +7,10 @@ class Team {
     this.won = won ;
     this.draw = draw ;
     this.lost = lost ;
-    this.team_games = team_won + team_draw + team_loss ;
+    this.team_games = team_won + team_draw + team_lost ;
     this.team_won = team_won ; 
     this.team_draw = team_draw ; 
-    this.team_loss = team_loss ; 
+    this.team_loss = team_lost ; 
     this.tb1 = won + draw * 0.5 ;
     this.tb2 = team_won*2 , team_draw * 1 ;
     this.tb3 = 0 ;  
@@ -62,7 +62,7 @@ let template = `
                     <td style="text-align: center">${participants[x].team_games}</td>
                     <td style="text-align: center">${participants[x].team_won}</td>
                     <td style="text-align: center">${participants[x].team_draw}</td>
-                    <td style="text-align: center">${participants[x].team_loss}</td>
+                    <td style="text-align: center">${participants[x].team_lost}</td>
                     <td style="text-align: center">${participants[x].tb1}</td>
                     <td style="text-align: center">${participants[x].tb2}</td>
                     <td style="text-align: center">${participants[x].tb3}</td>
