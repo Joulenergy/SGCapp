@@ -3,7 +3,7 @@ class Team {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
-    this.games = won + draw + loss ;
+    this.games = won + draw + lost ;
     this.won = won ;
     this.draw = draw ;
     this.lost = lost ;
