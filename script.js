@@ -13,7 +13,8 @@ class Team {
     this.team_loss = team_loss ; 
     this.tb1 = won + draw * 0.5 ;
     this.tb2 = team_won*2 , team_draw * 1 ;
-    this.tb3 = 0 ;            
+    this.tb3 = 0 ;  
+    this.opponents = [];
   }
 }
 
@@ -33,6 +34,8 @@ participants.sort((a, b) => {
         return -1;
       if (a.tb2 < b.tb2)
         return 1;
+      
+      
     }
     return 0;
 });
@@ -56,6 +59,10 @@ let template = `
                     <td style="text-align: center">${participants[x].won}</td>
                     <td style="text-align: center">${participants[x].draw}</td>
                     <td style="text-align: center">${participants[x].lost}</td>
+                    <td style="text-align: center">${participants[x].team_games}</td>
+                    <td style="text-align: center">${participants[x].team_won}</td>
+                    <td style="text-align: center">${participants[x].team_draw}</td>
+                    <td style="text-align: center">${participants[x].team_lost}</td>
                     <td style="text-align: center">${participants[x].tb1}</td>
                     <td style="text-align: center">${participants[x].tb2}</td>
                     <td style="text-align: center">${participants[x].tb3}</td>
