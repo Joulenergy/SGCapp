@@ -10,7 +10,7 @@ class Team {
     this.team_games = team_won + team_draw + team_lost ;
     this.team_won = team_won ; 
     this.team_draw = team_draw ; 
-    this.team_loss = team_lost ; 
+    this.team_lost = team_lost ; 
     this.tb1 = won + draw * 0.5 ;
     this.tb2 = team_won*2 , team_draw * 1 ;
     this.tb3 = 0 ;  
