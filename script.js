@@ -12,7 +12,7 @@ class Team {
     this.team_draw = team_draw ; 
     this.team_lost = team_lost ; 
     this.tb1 = won + draw * 0.5 ;
-    this.tb2 = team_won*2 , team_draw * 1 ;
+    this.tb2 = team_won*2 + team_draw * 1 ;
     this.tb3 = 0 ;  
     let this.opponents = [];
   }
