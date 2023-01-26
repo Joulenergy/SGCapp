@@ -14,7 +14,7 @@ class Team {
     this.tb1 = won + draw * 0.5 ;
     this.tb2 = team_won*2 + team_draw * 1 ;
     this.tb3 = 0 ;  
-    let this.opponents = [];
+
   }
 }
 
