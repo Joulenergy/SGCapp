@@ -51,23 +51,27 @@ participants[x].rank = x+1 ;
 
 
 let template = `
-                <tr>
-                    <td style="text-align: center">${participants[x].rank}</td>
-                    <td style="text-align: center">${participants[x].sno}</td>
-                    <td style="text-align: center">${participants[x].team}</td>
-                    <td style="text-align: center">${participants[x].games}</td>
-                    <td style="text-align: center">${participants[x].won}</td>
-                    <td style="text-align: center">${participants[x].draw}</td>
-                    <td style="text-align: center">${participants[x].lost}</td>
-                    <td style="text-align: center">${participants[x].team_games}</td>
-                    <td style="text-align: center">${participants[x].team_won}</td>
-                    <td style="text-align: center">${participants[x].team_draw}</td>
-                    <td style="text-align: center">${participants[x].team_lost}</td>
-                    <td style="text-align: center">${participants[x].tb1}</td>
-                    <td style="text-align: center">${participants[x].tb2}</td>
-                    <td style="text-align: center">${participants[x].tb3}</td>
+                <div class="one_fifth">
+                  <h4>${participants[x].rank}</h4>
+                  <p>${participants[x].team}/p>
+                </div>`:
+                #<tr>
+                  #  <td style="text-align: center">${participants[x].rank}</td>
+                  #  <td style="text-align: center">${participants[x].sno}</td>
+                #    <td style="text-align: center">${participants[x].team}</td>
+                #    <td style="text-align: center">${participants[x].games}</td>
+                 #   <td style="text-align: center">${participants[x].won}</td>
+                 #   <td style="text-align: center">${participants[x].draw}</td>
+                  #  <td style="text-align: center">${participants[x].lost}</td>
+                  #  <td style="text-align: center">${participants[x].team_games}</td>
+                   # <td style="text-align: center">${participants[x].team_won}</td>
+                  #  <td style="text-align: center">${participants[x].team_draw}</td>
+                   # <td style="text-align: center">${participants[x].team_lost}</td>
+                   # <td style="text-align: center">${participants[x].tb1}</td>
+                   # <td style="text-align: center">${participants[x].tb2}</td>
+                   # <td style="text-align: center">${participants[x].tb3}</td>
                     
-                </tr>`;
+               # </tr>`;
 table.innerHTML += template;
 x ++ ;
  
