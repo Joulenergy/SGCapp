@@ -10,22 +10,19 @@ db = Product()
 # we have 6 columns in the table and need 6 matching bits of data:
 '''
 date DATE,
-category TEXT,
-store TEXT,
-name TEXT,
-price REAL,
-link TEXT'''
+sno REAL,
+team TEXT
+won REAL,
+draw REAL,
+lost REAL,
+team_won REAL,
+team_draw REAL,
+team_lost REAL'''
 
 
-# matching date
 
-item = (
-	today,
-	'T-Shirts',
-	'Awesome tshirts',
-	'Black Logo Tee',
-	'24.99',
-	'link')
+
+item = (today,1,"Ur mum",4,2,6,3,7,8)
 
 # insert the data above into the table using the class method we called i
 # inserting the same data 
