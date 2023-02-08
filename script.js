@@ -54,7 +54,7 @@ let template = `
                 <div class="one_fifth">
                   <h4>${participants[x].rank}</h4>
                   <p>${participants[x].team}/p>
-                </div>`:
+                </div>`;
                 #<tr>
                   #  <td style="text-align: center">${participants[x].rank}</td>
                   #  <td style="text-align: center">${participants[x].sno}</td>
