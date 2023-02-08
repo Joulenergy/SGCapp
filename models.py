@@ -8,16 +8,19 @@ class Product:
 
 	def create_table(self):
 		# self.cur.execute("""DROP TABLE products""")
-		self.cur.execute("""CREATE TABLE IF NOT EXISTS products(
+		self.cur.execute("""CREATE TABLE IF NOT EXISTS products
 			date DATE PRIMARY KEY,
-			category TEXT,
-			store TEXT,
-			name TEXT,
-			price REAL,
-			link TEXT)""")
+			sno REAL,
+			team TEXT
+			won REAL,
+			draw REAL,
+			lost REAL,
+			team_won REAL,
+			team_draw REAL,
+			team_lost REAL)""")
 
 	def insert(self, item):
-		self.cur.execute("""INSERT OR IGNORE INTO products VALUES(?,?,?,?,?,?)""", item)
+		self.cur.execute("""INSERT OR IGNORE INTO products VALUES(?,?,?,?,?,?,?,?,?)""", item)
 		self.con.commit()
 
 	def read(self):
