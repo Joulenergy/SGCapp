@@ -41,27 +41,124 @@
       </div>
     </header>
 
-    <div class="container">
-      <table style="width:80%">
-        <tr>
-          <th style="width:5%;text-align:center">Rank</th>
-          <th style="width:5%;text-align:center">SNo</th> 
-          <th style="width:10%;text-align:center">Team</th>
-          <th style="width:5%;text-align:center">Solo_Games</th> 
-          <th style="width:3%;text-align:center">Win</th>
-          <th style="width:3%;text-align:center">Draw</th> 
-          <th style="width:3%;text-align:center">Lose</th>
-          <th style="width:5%;text-align:center">Team_games</th> 
-          <th style="width:3%;text-align:center">Team_Win</th>
-          <th style="width:3%;text-align:center">Team_Draw</th> 
-          <th style="width:3%;text-align:center">Team_Lose</th>
-          <th style="width:3%;text-align:center">TB1</th> 
-          <th style="width:3%;text-align:center">TB2</th>
-          <th style="width:3%;text-align:center">TB3</th>
-          </tr>
-        
-      </table>
-    </div>
-      <script src="script.js"></script>
+    <section class="main__middle__container homepage">
+      <div class="row text-center headings no-margin nothing">
+        <div class="container">
+          <h1 class="page_title">Rankings</h1>
+          <div class="seper"></div>
+          <div class="row no_padding title__block nothing no-margin">
+            <table class="dc_table_s1" cellspacing="0" summary="CPU Comparison" style="width:100%;">
+              <caption>
+              Table 1: CPU Comparison
+              </caption>
+              <tr>
+                <th scope="col" abbr="Specs" class="nobg">Specs</th>
+                <th scope="col" abbr="Xeon E5-2687W">Xeon E5-2687W</th>
+                <th scope="col" abbr=Core i7 990X">Core i7 990X</th>
+                <th scope="col" abbr="Opteron 6274">Opteron 6274</th>
+              </tr>
+              <tr>
+                <th scope="row" abbr="Model" class="spec">Brand</th>
+                <td>Intel</td>
+                <td>Intel</td>
+                <td>AMD</td>
+              </tr>
+              <tr>
+                <th scope="row" abbr="Speed" class="specalt">Speed</th>
+                <td class="alt">3.10GHz</td>
+                <td class="alt">3.47GHz</td>
+                <td class="alt">2.20Ghz</td>
+              </tr>
+              <tr>
+                <th scope="row" abbr="Cost" class="spec">Cost</th>
+                <td>$1800</td>
+                <td>$1100</td>
+                <td>$650</td>
+              </tr>
+              <tr>
+                <th scope="row" abbr="Cpu Mark" class="specalt">Cpu Mark</th>
+                <td class="alt">17,872</td>
+                <td class="alt">10,550</td>
+                <td class="alt">10,337</td>
+              </tr>
+            </table>
+            <div class="js_hide_gadget js_minimized">
+              <h4><a href="#" class="js_hs_a">View code:</a></h4>
+              <div class="js_hide_box">
+                <pre class="brush: xml">
+      
+      &lt;!-- DC Table Styles I:1 Start -->
+        &lt;table class="dc_table_s1" cellspacing="0" summary="CPU Comparison" style="width:100%;">
+          &lt;caption>
+          Table 1: CPU Comparison
+          &lt;/caption>
+          &lt;tr>
+            &lt;th scope="col" abbr="Specs" class="nobg">Specs&lt;/th>
+            &lt;th scope="col" abbr="Xeon E5-2687W">Xeon E5-2687W&lt;/th>
+            &lt;th scope="col" abbr=Core i7 990X">Core i7 990X&lt;/th>
+            &lt;th scope="col" abbr="Opteron 6274">Opteron 6274&lt;/th>
+          &lt;/tr>
+          &lt;tr>
+            &lt;th scope="row" abbr="Model" class="spec">Brand&lt;/th>
+            &lt;td>Intel&lt;/td>
+            &lt;td>Intel&lt;/td>
+            &lt;td>AMD&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;th scope="row" abbr="Speed" class="specalt">Speed&lt;/th>
+            &lt;td class="alt">3.10GHz&lt;/td>
+            &lt;td class="alt">3.47GHz&lt;/td>
+            &lt;td class="alt">2.20Ghz&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;th scope="row" abbr="Cost" class="spec">Cost&lt;/th>
+            &lt;td>$1800&lt;/td>
+            &lt;td>$1100&lt;/td>
+            &lt;td>$650&lt;/td>
+          &lt;/tr>
+          &lt;tr>
+            &lt;th scope="row" abbr="Cpu Mark" class="specalt">Cpu Mark&lt;/th>
+            &lt;td class="alt">17,872&lt;/td>
+            &lt;td class="alt">10,550&lt;/td>
+            &lt;td class="alt">10,337&lt;/td>
+          &lt;/tr>
+        &lt;/table>
+      &lt;!-- DC Table Styles I:1 End -->
+      
+                </pre>
+              </div>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">See Points</a></p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <p class="text-center copyright">&copy; Copyright VRMC. All Rights Reserved.</p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+    
+    $('.carousel').carousel({
+      interval: 3500, // in milliseconds
+      pause: 'none' // set to 'true' to pause slider on mouse hover
+    })
+    
+    </script> 
+    <script type="text/javascript">
+    $( "a.submenu" ).click(function() {
+    $( ".menuBar" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    });
+    $( "ul li.dropdown a" ).click(function() {
+    $( "ul li.dropdown ul" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    $('ul li.dropdown').toggleClass('current');
+    });
+    </script>
   </body>
 </html>
