@@ -512,7 +512,7 @@ ul.dropdown-menu>li>a:hover {
 /*Titles*/
 .row.nice__title {
 	background: url('../images/image_1920x1000.jpg') no-repeat;
- // background-size:100% 100%;
+	background-size:100% 100%;
 	background-origin: initial;
 	background-clip: initial;
 	background-size: cover;
