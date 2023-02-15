@@ -1,5 +1,8 @@
+const spawner = require('child_process').spawn;
+const python_process = spawner('python',[./python.py,JSON.stringify(data_to_pass_in]);
+
 class Team {
-  constructor(sno,team,won,draw,lost, team_won,team_draw,team_lost) {
+  constructor(int(sno),team,int(won),int(draw),int(lost), int(team_won),int(team_draw),int(team_lost)) {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
@@ -18,10 +21,11 @@ class Team {
   }
 }
 
+
 let JohnCena = new Team(1,"Ur mum",4,2,6,3,7,8);
 let Rick = new Team(2,"WHEEEEEEEEE",4,2,6,3,9,8);
 let Why = new Team(3,"Gae",4,2,6,3,4,6);
-let participants = [JohnCena,Rick,Why];
+let participants = JSON.parse(data.toString());
 
 
 participants.sort((a, b) => {
