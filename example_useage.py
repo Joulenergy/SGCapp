@@ -33,15 +33,22 @@ item = (today,1,"Ur mum",4,2,6,3,7,8)
 
 db.insert(item)
 
+
 # read all the data in the db back, and loop over the rows
 stuff = [][]
 count = 0
 for item in db.read():
-	stuff[count].append(item)
+	stuff[count.append(item)
 	if len(stuff[count]) == 9:
 		def stuff[0]
 		count = count + 1
 		
+
+
+
+
+	      
+	      
 input = ast.literal_eval(sys.argv[1])
 output = input
 output.append(stuff)
