@@ -1,19 +1,82 @@
-  <table style="width:80%">
-    <tr>
-      <th style="width:5%;text-align:center">Rank</th>
-      <th style="width:5%;text-align:center">SNo</th> 
-      <th style="width:10%;text-align:center">Team</th>
-      <th style="width:5%;text-align:center">Solo_Games</th> 
-      <th style="width:3%;text-align:center">Win</th>
-      <th style="width:3%;text-align:center">Draw</th> 
-      <th style="width:3%;text-align:center">Lose</th>
-      <th style="width:5%;text-align:center">Team_games</th> 
-      <th style="width:3%;text-align:center">Team_Win</th>
-      <th style="width:3%;text-align:center">Team_Draw</th> 
-      <th style="width:3%;text-align:center">Team_Lose</th>
-      <th style="width:3%;text-align:center">TB1</th> 
-      <th style="width:3%;text-align:center">TB2</th>
-      <th style="width:3%;text-align:center">TB3</th>
-      </tr>
-  </table>
-<script src="script.js"></script>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SGC Web App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header class="main__header">
+      <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header"> <a href="#" onClick="javascript.void()" class="submenu">Menus</a> </div>
+          <div class="menuBar">
+            <ul class="menu">
+              <li class="active"><a href="index.html">Home</a></li>
+              <li><a href="matches.html">Matching Page</a></li>
+              <li><a href="admin.html">Admin</a></li>
+              <li><a href="rankingpage.html">Ranking</a></li>
+              <li><a href="">full page</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse --> 
+        </nav>
+        <div class="navbar-header with__logo">
+          <h1 class="navbar-brand"><a href="index.html">SGC</a></h1>
+        </div>
+      </div>
+    </header>
+
+    <table style="width:80%">
+      <tr>
+        <th style="width:5%;text-align:center">Rank</th>
+        <th style="width:5%;text-align:center">SNo</th> 
+        <th style="width:10%;text-align:center">Team</th>
+        <th style="width:5%;text-align:center">Solo_Games</th> 
+        <th style="width:3%;text-align:center">Win</th>
+        <th style="width:3%;text-align:center">Draw</th> 
+        <th style="width:3%;text-align:center">Lose</th>
+        <th style="width:5%;text-align:center">Team_games</th> 
+        <th style="width:3%;text-align:center">Team_Win</th>
+        <th style="width:3%;text-align:center">Team_Draw</th> 
+        <th style="width:3%;text-align:center">Team_Lose</th>
+        <th style="width:3%;text-align:center">TB1</th> 
+        <th style="width:3%;text-align:center">TB2</th>
+        <th style="width:3%;text-align:center">TB3</th>
+        </tr>
+    </table>
+
+    <p class="text-center copyright">&copy; Copyright VRMC. All Rights Reserved.</p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+    
+    </script> 
+    <script type="text/javascript">
+    $( "a.submenu" ).click(function() {
+    $( ".menuBar" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    });
+    $( "ul li.dropdown a" ).click(function() {
+    $( "ul li.dropdown ul" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    $('ul li.dropdown').toggleClass('current');
+    });
+    </script>
+
+  </body>
+
+  
+</html>
+  
+<!--<script src="script.js"></script> -->
