@@ -22,14 +22,18 @@ class Team {
 }
 
 
-let JohnCena = new Team(1,"Ur mum",4,2,6,3,7,8);
-let Rick = new Team(2,"WHEEEEEEEEE",4,2,6,3,9,8);
-let Why = new Team(3,"Gae",4,2,6,3,4,6);
-let participants = JSON.parse(data.toString());
 
+let data = JSON.parse(data.toString());
+participants = []
+int count = 0;
+while (count <= data.size()/8){
+  
+  participants.add(Team(data[8*count],data[8*count+1],data[8*count+2],data[8*count+3],data[8*count+4],data[8*count+5],data[8*count+6],data[8*count+7]));
+  count += 1;
+}
 
 participants.sort((a, b) => {
-    if (a.tb1 > b.tb1)
+    if (a.[ > b.tb1)
         return -1;
     if (a.tb1 < b.tb1)
         return 1;
@@ -55,27 +59,24 @@ participants[x].rank = x+1 ;
 
 
 let template = `
-                <div class="one_fifth">
-                  <h4>${participants[x].rank}</h4>
-                  <p>${participants[x].team}/p>
-                </div>`;
-                #<tr>
-                  #  <td style="text-align: center">${participants[x].rank}</td>
-                  #  <td style="text-align: center">${participants[x].sno}</td>
-                #    <td style="text-align: center">${participants[x].team}</td>
-                #    <td style="text-align: center">${participants[x].games}</td>
-                 #   <td style="text-align: center">${participants[x].won}</td>
-                 #   <td style="text-align: center">${participants[x].draw}</td>
-                  #  <td style="text-align: center">${participants[x].lost}</td>
-                  #  <td style="text-align: center">${participants[x].team_games}</td>
-                   # <td style="text-align: center">${participants[x].team_won}</td>
-                  #  <td style="text-align: center">${participants[x].team_draw}</td>
-                   # <td style="text-align: center">${participants[x].team_lost}</td>
-                   # <td style="text-align: center">${participants[x].tb1}</td>
-                   # <td style="text-align: center">${participants[x].tb2}</td>
-                   # <td style="text-align: center">${participants[x].tb3}</td>
+                
+                <tr>
+                    <td style="text-align: center">${participants[x].rank}</td>
+                    <td style="text-align: center">${participants[x].sno}</td>
+                    <td style="text-align: center">${participants[x].team}</td>
+                    <td style="text-align: center">${participants[x].games}</td>
+                    <td style="text-align: center">${participants[x].won}</td>
+                    <td style="text-align: center">${participants[x].draw}</td>
+                    <td style="text-align: center">${participants[x].lost}</td>
+                    <td style="text-align: center">${participants[x].team_games}</td>
+                    <td style="text-align: center">${participants[x].team_won}</td>
+                    <td style="text-align: center">${participants[x].team_draw}</td>
+                    <td style="text-align: center">${participants[x].team_lost}</td>
+                    <td style="text-align: center">${participants[x].tb1}</td>
+                    <td style="text-align: center">${participants[x].tb2}</td>
+                    <td style="text-align: center">${participants[x].tb3}</td>
                     
-               # </tr>`;
+               </tr>`;
 table.innerHTML += template;
 x ++ ;
  
