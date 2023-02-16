@@ -2,7 +2,7 @@ const spawner = require('child_process').spawn;
 const python_process = spawner('python',[./example_useage.py,JSON.stringify(data_to_pass_in]);
 
 class Team {
-  constructor(int(sno),team,int(won),int(draw),int(lost), int(team_won),int(team_draw),int(team_lost)) {
+  constructor(Integer.parseInt(sno),team,Integer.parseInt(won),Integer.parseInt(draw),Integer.parseInt(lost), Integer.parseInt(team_won),Integer.parseInt(team_draw),Integer.parseInt(team_lost)) {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
