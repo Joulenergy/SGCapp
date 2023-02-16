@@ -35,10 +35,10 @@ db.insert(item)
 
 
 # read all the data in the db back, and loop over the rows
-stuff = [][]
+stuff = []
 count = 0
 for item in db.read():
-	stuff[count.append(item)
+	stuff.append(item)
 	if len(stuff[count]) == 9:
 		def stuff[0]
 		count = count + 1
