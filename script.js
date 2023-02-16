@@ -1,5 +1,13 @@
 const spawner = require('child_process').spawn;
-//const python_process = spawner('python',[./example_useage.py,JSON.stringify(data_to_pass_in]);
+
+const data_to_pass_in = {
+  data_sent : "",
+  data_returned : undefined
+};
+
+console.log('',data_to_pass_in);
+
+const python_process = spawner('python',[./example_useage.py,JSON.stringify(data_to_pass_in]);
 
 class Team {
   constructor(Integer.parseInt(sno),team,Integer.parseInt(won),Integer.parseInt(draw),Integer.parseInt(lost), Integer.parseInt(team_won),Integer.parseInt(team_draw),Integer.parseInt(team_lost)) {
@@ -23,7 +31,10 @@ class Team {
 
 
 
-let data = JSON.parse(data.toString());
+let data = python_process.stdout.on('data', (data)=>{
+  console.log( JSON.parse(data.toString()));
+});
+
 participants = []
 int count = 0;
 while (count <= data.size()/8){
