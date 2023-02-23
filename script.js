@@ -1,4 +1,12 @@
 const spawner = require('child_process').spawn;
+
+const data_to_pass_in = {
+  data_sent : "",
+  data_returned : undefined
+};
+
+console.log('',data_to_pass_in);
+
 const python_process = spawner('python',[./example_useage.py,JSON.stringify(data_to_pass_in]);
 
 class Team {
@@ -23,7 +31,10 @@ class Team {
 
 
 
-let data = JSON.parse(data.toString());
+let data = python_process.stdout.on('data', (data)=>{
+  console.log( JSON.parse(data.toString()));
+});
+
 participants = []
 int count = 0;
 while (count <= data.size()/8){
