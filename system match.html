@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chess Match Scoring System</title>
+	<style>
+		table {
+			border-collapse: collapse;
+			margin: 20px;
+		}
+		th, td {
+			padding: 10px;
+			border: 1px solid black;
+		}
+		input[type=number] {
+			width: 50px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Chess Match Scoring System</h1>
+	<table>
+		<thead>
+			<tr>
+				<th>Team</th>
+				<th>Player 1</th>
+				<th>Player 2</th>
+				<th>Total</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>White</td>
+				<td><input type="number" name="white-player1" min="0" max="2" value="0"></td>
+				<td><input type="number" name="white-player2" min="0" max="2" value="0"></td>
+				<td><span id="white-total">0</span></td>
+			</tr>
+			<tr>
+				<td>Black</td>
+				<td><input type="number" name="black-player1" min="0" max="2" value="0"></td>
+				<td><input type="number" name="black-player2" min="0" max="2" value="0"></td>
+				<td><span id="black-total">0</span></td>
+			</tr>
+		</tbody>
+	</table>
+	<button onclick="calculateScore()">Calculate Scores</button>
+
+	<script>
+		function calculateScore() {
+			var whiteTotal = 0;
+			var blackTotal = 0;
+			var whitePlayer1Score = parseInt(document.getElementsByName("white-player1")[0].value);
+			var whitePlayer2Score = parseInt(document.getElementsByName("white-player2")[0].value);
+			var blackPlayer1Score = parseInt(document.getElementsByName("black-player1")[0].value);
+			var blackPlayer2Score = parseInt(document.getElementsByName("black-player2")[0].value);
+
+			// Calculate white team total score
+			whiteTotal = whitePlayer1Score + whitePlayer2Score;
+			document.getElementById("white-total").innerHTML = whiteTotal;
+
+			// Calculate black team total score
+			blackTotal = blackPlayer1Score + blackPlayer2Score;
+			document.getElementById("black-total").innerHTML = blackTotal;
+
+			// Compare scores and declare match result
+			if (whiteTotal == blackTotal) {
+				alert("Match drawn!");
+			} else if (whiteTotal > blackTotal) {
+				alert("White team wins!");
+			} else {
+				alert("Black team wins!");
+			}
+		}
+	</script>
+</body>
+</html>
+
