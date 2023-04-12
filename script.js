@@ -32,7 +32,9 @@ class Team {
 
 
 
-String[] data = python_process('data', (data)=>{console.log( JSON.parse(data.toString()));});
+data = python_process('data', (data)=>{
+  console.log( JSON.parse(data.toString());
+                                  });
 
 participants = [];
 int count = 0;
