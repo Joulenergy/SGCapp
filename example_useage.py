@@ -39,8 +39,8 @@ stuff = []
 count = 0
 for item in db.read():
 	stuff.append(item)
-	if len(stuff[count]) == 9:
-		def stuff[0]
+	if len(stuff) % 8 == 1:
+		del stuff[0]
 		count = count + 1
 		
 
