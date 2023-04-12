@@ -44,17 +44,19 @@ while (count <= data.size()/8){
 }
 
 participants.sort((a, b) => {
-    if (a.[ > b.tb1)
-        return -1;
-    if (a.tb1 < b.tb1)
+    if (a.tb1 > b.tb1){
         return 1;
+    }
+    if (a.tb1 < b.tb1){
+        return 1;
+    }
     if (a.tb1 == b.tb1){
-      if (a.tb2 > b.tb2)
-        return -1;
-      if (a.tb2 < b.tb2)
+      if (a.tb2 > b.tb2){
         return 1;
-      
-      
+      }
+      if (a.tb2 < b.tb2){
+        return 1;
+      }   
     }
     return 0;
 });
