@@ -4,7 +4,7 @@ const data_to_pass_in = []
 
 console.log('',data_to_pass_in);
 
-const python_process = spawner('python',[./example_useage.py,JSON.stringify(data_to_pass_in]);
+const python_process = spawner('python',['./example_useage.py',JSON.stringify(data_to_pass_in]);
 
 class Team {
   constructor(Integer.parseInt(sno),team,Integer.parseInt(won),Integer.parseInt(draw),Integer.parseInt(lost), Integer.parseInt(team_won),Integer.parseInt(team_draw),Integer.parseInt(team_lost)) {
