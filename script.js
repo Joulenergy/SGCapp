@@ -28,9 +28,7 @@ class Team {
 
 
 
-let data = python_process('data', (data)=>{
-  console.log( JSON.parse(data.toString()));
-});
+String[] data = python_process('data', (data)=>{console.log( JSON.parse(data.toString()));});
 
 participants = [];
 int count = 0;
