@@ -32,7 +32,7 @@ let data = python_process('data', (data)=>{
   console.log( JSON.parse(data.toString()));
 });
 
-participants = []
+participants = [];
 int count = 0;
 participants = [new Team(1,"Ur mum",4,2,6,3,7,8,2);]
 while (count <= data.size()/8){
