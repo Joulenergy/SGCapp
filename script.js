@@ -1,9 +1,6 @@
 const spawner = require('child_process').spawn;
 
-const data_to_pass_in = {
-  data_sent : "",
-  data_returned : undefined
-};
+const data_to_pass_in = []
 
 console.log('',data_to_pass_in);
 
@@ -31,7 +28,7 @@ class Team {
 
 
 
-let data = python_process.stdout.on('data', (data)=>{
+let data = python_process('data', (data)=>{
   console.log( JSON.parse(data.toString()));
 });
 
