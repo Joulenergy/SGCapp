@@ -37,11 +37,10 @@ let data = python_process.stdout.on('data', (data)=>{
 
 participants = []
 int count = 0;
-participants = [Team(1,"Ur mum",4,2,6,3,7,8,2);]
+participants = [new Team(1,"Ur mum",4,2,6,3,7,8,2);]
 while (count <= data.size()/8){
   
-  participants.add(Team(data[8*count],data[8*count+1],data[8*count+2],data[8*count+3],data[8*count+4],data[8*count+5],data[8*count+6],data[8*count+7]));
-  count += 1;
+
 }
 
 participants.sort((a, b) => {
