@@ -7,7 +7,7 @@ console.log('',data_to_pass_in);
 const python_process = spawner('python',['./example_useage.py',JSON.stringify(data_to_pass_in)]);
 
 class Team {
-  constructor(Integer.parseInt(sno),team,Integer.parseInt(won),Integer.parseInt(draw),Integer.parseInt(lost), Integer.parseInt(team_won),Integer.parseInt(team_draw),Integer.parseInt(team_lost)) {
+  constructor(sno,team,won,draw,lost, team_won,team_draw,team_lost) {
     this.rank = 0;
     this.sno = sno ;
     this.team = team ;
@@ -34,7 +34,7 @@ let data = python_process('data', (data)=>{
 
 participants = []
 int count = 0;
-participants = [new Team("1","Ur mum","4","2","6","3","7","8","2");]
+participants = [new Team(1,"Ur mum",4,2,6,3,7,8,2);]
 while (count <= data.size()/8){
   count += 1;
 
