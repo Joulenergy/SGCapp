@@ -2,9 +2,7 @@ define(function (require) {
     var namedModule = require('name');
 });
 
-require(['foo'], function (foo) {
-    //foo is now loaded.
-});
+
 
 const spawner = require('child_process').spawn;
 
