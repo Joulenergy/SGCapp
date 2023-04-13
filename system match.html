@@ -39,18 +39,19 @@
       <div class="container" style="margin-bottom: 500px;position:absolute; left:80px; top:200px;">
        
         <h1 style="margin-top: -550px;" class="page_title">Scoreboard</h1>
-		<form id="scoreForm">
-			<label for="name">Name:</label>
-			<input type="text" id="name" name="name" required>
+		
+    <form id="scoreForm">
+			<label for="teamname">TeamName:</label>
+			<input type="text" id="teamname" name="teamname" required>
 			<br>
 			<label for="score">Score:</label>
 			<input type="number" id="score" name="score" required>
 			<br>
-			<input type="submit" value="Submit Score">
+			<button type="button" onclick="addScore()">Add Score</button>
 		</form>
 
 		<table id="scoreTable">
-			<table style="width:100%; margin-top: 0px; align-items:center">
+			
 			<thead>
 				<tr>
 					<th>TeamName</th>
@@ -64,23 +65,20 @@
 		
 		<script>
 			// Add event listener to form submission
-			document.getElementById("scoreForm").addEventListener("submit", function(event) {
+			document.getElementById("scoreForm").addEventListener("addScore", function(event) {
 				event.preventDefault(); // prevent default form submission behavior
 	
 				// Get form data
 				const formData = new FormData(event.target);
-				const name = formData.get("name");
+				const name = formData.get("teamname");
 				const score = formData.get("score");
 	
-				// Send data to server to store in database
-				// You'll need to write server-side code to handle this
-	
 				// Clear form inputs
-				document.getElementById("name").value = "";
+				document.getElementById("teamname").value = "";
 				document.getElementById("score").value = "";
 	
 				// Update table with new data
-				const table = document.getElementById("scoreTable");
+				const table = document.getElementById("scoreTable").getElementsByTagName("tbody")[0];
 				const row = table.insertRow(-1);
 				const nameCell = row.insertCell(0);
 				const scoreCell = row.insertCell(1);
