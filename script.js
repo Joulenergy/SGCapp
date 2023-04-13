@@ -37,7 +37,7 @@ python_process.stdout.on('data', (data) => {
     participants.push(data)
 });
 
-int count = 0;
+let count = 0;
 participants = [new Team(1,"Ur mum",4,2,6,3,7,8,2);]
 while (count <= data.size()/8){
   count += 1;
