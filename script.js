@@ -33,8 +33,8 @@ class Team {
 
 
 participants = [];
-script.stdout.on('data', (data) => {
-    chunks.push(participants)
+python_process.stdout.on('data', (data) => {
+    participants.push(data)
 });
 
 int count = 0;
