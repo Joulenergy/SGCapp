@@ -1,76 +1,123 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Chess Match Scoring System</title>
-	<style>
-		table {
-			border-collapse: collapse;
-			margin: 20px;
-		}
-		th, td {
-			padding: 10px;
-			border: 1px solid black;
-		}
-		input[type=number] {
-			width: 50px;
-		}
-	</style>
-</head>
-<body>
-	<h1>Chess Match Scoring System</h1>
-	<table>
-		<thead>
-			<tr>
-				<th>Team</th>
-				<th>Player 1</th>
-				<th>Player 2</th>
-				<th>Total</th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td>White</td>
-				<td><input type="number" name="white-player1" min="0" max="2" value="0"></td>
-				<td><input type="number" name="white-player2" min="0" max="2" value="0"></td>
-				<td><span id="white-total">0</span></td>
-			</tr>
-			<tr>
-				<td>Black</td>
-				<td><input type="number" name="black-player1" min="0" max="2" value="0"></td>
-				<td><input type="number" name="black-player2" min="0" max="2" value="0"></td>
-				<td><span id="black-total">0</span></td>
-			</tr>
-		</tbody>
-	</table>
-	<button onclick="calculateScore()">Calculate Scores</button>
+  <head>
+    <title>SGC Web App</title>
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Kreon:300,400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+    <link href="css/style.css" rel="stylesheet">
+  </head>
 
-	<script>
-		function calculateScore() {
-			var whiteTotal = 0;
-			var blackTotal = 0;
-			var whitePlayer1Score = parseInt(document.getElementsByName("white-player1")[0].value);
-			var whitePlayer2Score = parseInt(document.getElementsByName("white-player2")[0].value);
-			var blackPlayer1Score = parseInt(document.getElementsByName("black-player1")[0].value);
-			var blackPlayer2Score = parseInt(document.getElementsByName("black-player2")[0].value);
+  <body>
+    <header class="main__header">
+      <div class="container">
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="navbar-header"> <a href="#" onClick="javascript.void()" class="submenu">Menus</a> </div>
+          <div class="menuBar">
+            <ul class="menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="matches.html">Matches</a></li>
+			  <li class="active"><a href="Scoreboard.html">Scoreboard</a></li>
+              <li><a href="admin.html">Admin</a></li>
+              <li><a href="rankingpage.html">Ranking</a></li>
+              <li><a href="">full page</a></li>
+              <li><a href="">contact us</a></li>
+            </ul>
+          </div>
+          <!-- /.navbar-collapse --> 
+        </nav>
+        <div class="navbar-header with__logo">
+          <h1 class="navbar-brand"><a href="index.html">SGC</a></h1>
+        </div>
+      </div>
+    </header>
 
-			// Calculate white team total score
-			whiteTotal = whitePlayer1Score + whitePlayer2Score;
-			document.getElementById("white-total").innerHTML = whiteTotal;
+    <section class="homepage">
+      <div class="container" style="margin-bottom: 500px;position:absolute; left:80px; top:200px;">
+       
+        <h1 style="margin-top: -550px;" class="page_title">Scoreboard</h1>
+		<form id="scoreForm">
+			<label for="name">Name:</label>
+			<input type="text" id="name" name="name" required>
+			<br>
+			<label for="score">Score:</label>
+			<input type="number" id="score" name="score" required>
+			<br>
+			<input type="submit" value="Submit Score">
+		</form>
 
-			// Calculate black team total score
-			blackTotal = blackPlayer1Score + blackPlayer2Score;
-			document.getElementById("black-total").innerHTML = blackTotal;
+		<table id="scoreTable">
+			<table style="width:100%; margin-top: 0px; align-items:center">
+			<thead>
+				<tr>
+					<th>TeamName</th>
+					<th>Score</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!-- Table rows will be dynamically generated with JavaScript -->
+			</tbody>
+		</table>
+		
+		<script>
+			// Add event listener to form submission
+			document.getElementById("scoreForm").addEventListener("submit", function(event) {
+				event.preventDefault(); // prevent default form submission behavior
+	
+				// Get form data
+				const formData = new FormData(event.target);
+				const name = formData.get("name");
+				const score = formData.get("score");
+	
+				// Send data to server to store in database
+				// You'll need to write server-side code to handle this
+	
+				// Clear form inputs
+				document.getElementById("name").value = "";
+				document.getElementById("score").value = "";
+	
+				// Update table with new data
+				const table = document.getElementById("scoreTable");
+				const row = table.insertRow(-1);
+				const nameCell = row.insertCell(0);
+				const scoreCell = row.insertCell(1);
+				nameCell.innerHTML = name;
+				scoreCell.innerHTML = score;
+			});
+		</script>
+    
+    </section>
+    
 
-			// Compare scores and declare match result
-			if (whiteTotal == blackTotal) {
-				alert("Match drawn!");
-			} else if (whiteTotal > blackTotal) {
-				alert("White team wins!");
-			} else {
-				alert("Black team wins!");
-			}
-		}
-	</script>
-</body>
+    <p class="text-center copyright">&copy; Copyright VRMC. All Rights Reserved.</p>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script type="text/javascript" src="js/jquery.min.js"></script> 
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/bootstrap.min.js"></script> 
+    <script type="text/javascript">
+    
+    </script> 
+    <script type="text/javascript">
+    $( "a.submenu" ).click(function() {
+    $( ".menuBar" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    });
+    $( "ul li.dropdown a" ).click(function() {
+    $( "ul li.dropdown ul" ).slideToggle( "normal", function() {
+    // Animation complete.
+    });
+    $('ul li.dropdown').toggleClass('current');
+    });
+    </script>
+    
+    <script src="script.js"></script>
+  </body>
+
+  
 </html>
-
+  
+<!--<script src="script.js"></script> -->
