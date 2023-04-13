@@ -1,4 +1,6 @@
-
+require(['foo'], function (foo) {
+    //foo is now loaded.
+});
 
 const spawner = require('child_process').spawn;
 
