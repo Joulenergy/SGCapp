@@ -1,4 +1,5 @@
-
+import data from './data.json' assert { type: 'JSON' };
+console.log(data);
 
 class Team {
   constructor(sno,team,won,draw,lost, team_won,team_draw,team_lost) {
