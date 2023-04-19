@@ -1,18 +1,4 @@
-functionGlobalContext: {
-    require:require
-}
 
-var require = global.get('require');
-var request = require('request');
-
-
-const spawner = require('child_process').spawn;
-
-const data_to_pass_in = []
-
-console.log('',data_to_pass_in);
-
-const python_process = spawner('python',['./example_useage.py',JSON.stringify(data_to_pass_in)]);
 
 class Team {
   constructor(sno,team,won,draw,lost, team_won,team_draw,team_lost) {
@@ -39,9 +25,7 @@ class Team {
 
 
 participants = [];
-python_process.stdout.on('data', (data) => {
-    participants.push(data)
-});
+participants = JSON.parse(data);
 
 let count = 0;
 participants = [new Team(1,"Ur mum",4,2,6,3,7,8,2)];
