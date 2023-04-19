@@ -1,7 +1,9 @@
-define(function (require) {
-    var namedModule = require('name');
-});
+functionGlobalContext: {
+    require:require
+}
 
+var require = global.get('require');
+var request = require('request');
 
 
 const spawner = require('child_process').spawn;
