@@ -37,21 +37,23 @@ db.insert(item)
 # read all the data in the db back, and loop over the rows
 stuff = []
 count = 0
+
+
+
 for item in db.read():
 	stuff.append(item)
 	if len(stuff) % 8 == 1:
 		del stuff[0]
 		count = count + 1
 		
+json_object = json.dumps(stuff, indent=4)
 
-
+with open("data.json", "w") as outfile:
+    json.dump(stuff, outfile)
 
 
 	      
 	      
-input = ast.literal_eval(sys.argv[1])
-output = input
-output.append(stuff)
-print(json.dumps(output))
+
 
 
