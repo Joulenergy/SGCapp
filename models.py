@@ -11,7 +11,7 @@ class Product:
 		self.cur.execute("""CREATE TABLE IF NOT EXISTS products
 			date DATE PRIMARY KEY,
 			sno REAL,
-			team TEXT
+			team TEXT,
 			won REAL,
 			draw REAL,
 			lost REAL,
